@@ -37,6 +37,8 @@ createBtn.addEventListener("click", (event) => {
 
 destroyBtn.addEventListener("click", (event) => {
   boxesContainer.innerHTML = "";
+  inputEl.reset();
+
 });
 
 // Функция для выбра рандом цвета

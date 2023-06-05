@@ -1,5 +1,5 @@
 const formEl = document.querySelector(".login-form");
-const inputEl = document.querySelectorAll(".login-form input");
+const inputElements = document.querySelectorAll(".login-form input");
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -19,21 +19,21 @@ formEl.addEventListener("submit", (event) => {
   }
 });
 
-// Второй варинат проверки. Подскажите, какой более правильный?
+// Второй варинат проверки. Вроде легче масштабируемый, но кривоватый :с
 
 // formEl.addEventListener("submit", (event) => {
 //   event.preventDefault();
-//   inputEl.forEach((element) => {
-//     if (element.value.length === 0) {
-//       return window.alert("All inputs must be filled");
-//     } else {
+//   inputElements.forEach((element) => {
+//     if (element.value !== "") {
 //       const formElements = event.currentTarget.elements;
 //       const formData = {
 //         [formElements.email.name]: formElements.email.value,
 //         [formElements.password.name]: formElements.password.value,
 //       };
 //       console.log(formData);
+//       console.log(event.currentTarget.elements);
 //       formEl.reset();
 //     }
+//     return window.alert("All inputs must be filled");
 //   });
 // });

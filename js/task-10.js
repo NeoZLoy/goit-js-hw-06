@@ -14,7 +14,7 @@ createBtn.addEventListener("click", (event) => {
   do {
     divArray.push(document.createElement("div"));
   } while (divArray.length < elementsQuantity);
-  console.log(divArray);
+
 
   // Добавляем стили для первого блока
   divArray[0].style.backgroundColor = getRandomHexColor();

@@ -30,6 +30,7 @@ createBtn.addEventListener("click", (event) => {
   }
 
   // Рендерим блоки
+  boxesContainer.innerHTML = "";
   boxesContainer.append(...divArray);
 });
 
@@ -37,8 +38,7 @@ createBtn.addEventListener("click", (event) => {
 
 destroyBtn.addEventListener("click", (event) => {
   boxesContainer.innerHTML = "";
-  inputEl.reset();
-
+  inputEl.value = "";
 });
 
 // Функция для выбра рандом цвета
